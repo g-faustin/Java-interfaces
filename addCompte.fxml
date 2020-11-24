@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #C3B09C;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.AddCompteController">
+   <children>
+      <Pane layoutX="9.0" layoutY="14.0" prefHeight="222.0" prefWidth="313.0" style="-fx-background-color: #B88A5C;">
+         <children>
+            <Text layoutX="87.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Données partenaire">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nci">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom et prénom">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Téléphone">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtNci" layoutX="116.0" layoutY="46.0" />
+            <Button layoutX="272.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleSearchPartenaire" style="-fx-background-color: #382A1C;" text="OK" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtNomPrenom" disable="true" layoutX="117.0" layoutY="82.0" />
+            <TextField fx:id="txtTel" disable="true" layoutX="117.0" layoutY="116.0" />
+            <TextField fx:id="txtAdresse" disable="true" layoutX="117.0" layoutY="152.0" prefHeight="53.0" prefWidth="149.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="9.0" layoutY="258.0" prefHeight="128.0" prefWidth="313.0" style="-fx-background-color: #B88A5C;">
+         <children>
+            <Text layoutX="87.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Données connexion">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtLogin" disable="true" layoutX="121.0" layoutY="46.0" prefHeight="25.0" prefWidth="173.0" />
+            <TextField fx:id="txtPwd" disable="true" layoutX="121.0" layoutY="81.0" prefHeight="25.0" prefWidth="173.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="338.0" layoutY="14.0" prefHeight="128.0" prefWidth="253.0" style="-fx-background-color: #B88A5C;">
+         <children>
+            <Text layoutX="57.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération de dépôt">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solde">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtSolde" layoutX="57.0" layoutY="52.0" prefHeight="25.0" prefWidth="173.0" />
+            <Button layoutX="155.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleCreateCompte" style="-fx-background-color: #382A1C;" text="Enregistrer" textFill="#fcf7f7">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="338.0" layoutY="164.0" prefHeight="222.0" prefWidth="253.0" style="-fx-background-color: #B88A5C;">
+         <children>
+            <Text layoutX="81.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mes comptes">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <TableView layoutY="44.0" prefHeight="179.0" prefWidth="253.0">
+              <columns>
+                <TableColumn prefWidth="127.0" text="Numero" />
+                <TableColumn prefWidth="127.0" text="Solde" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
